@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="body">
+{% for message in messages %}
+
+  {% if message.message_from != login_user %}
+<!--style="background-color:#E5FBF4"-->
+  <div class="container" align="left" >
+    <p> {{message.message_from}}</p>
+  <img src="/w3images/bandmember.jpg" alt="Avatar">
+  <p>{{message.message_text}}</p>
+  <span class="time-right">{{message.message_createTime}}</span>
+  </div>
+  {% else %}
+<!--style="background-color:#E5ECFB"-->
+  <div class="container darker" align="right" >
+    <p>me</p>
+  <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
+  <p>{{message.message_text}}</p>
+  <span class="time-left">{{message.message_createTime}}</span>
+  </div>
+{% endif %}
+
+{% endfor %}
+
+<div class ="input_text" align="right"  >
+    <form method="post">
+        {% csrf_token %}
+<!--        <input type="text" name="message">-->
+        <textarea placeholder="Type message.." name="message" required   rows="4"  cols="30"></textarea>
+        <input type="submit">
+    </form>
+</div>
+
+</div>
+
+
+</body>
+</html>
+
