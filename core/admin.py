@@ -34,6 +34,7 @@ class Group_AdminSite(admin.ModelAdmin):
                     'group_about',
                     'group_createTime',
                     'User_Of_Group',
+
                     )
 
 admin.site.register(Group,Group_AdminSite)
