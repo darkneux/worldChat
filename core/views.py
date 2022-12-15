@@ -20,9 +20,11 @@ def chat_global(request):
     print(request.user)
     present_chatroom_chats = Message.objects.filter(message_chatroom__isnull=True,message_group__isnull=True).order_by('message_createTime')
     login_user = User.objects.get(pk=request.user.id)
+    user_profile = User_Profile.objects.get(user=login_user.id)
     data = {
         'messages': present_chatroom_chats,
-        'login_user': login_user
+        'login_user': login_user,
+        'user_profile': user_profile
     }
     print(type(request.user))
 

@@ -10,7 +10,8 @@ from django.dispatch import receiver
 class User_Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(max_length=120, default='')
-    follow = models.ManyToManyField(User ,related_name= "follow_user")
+    follow = models.ManyToManyField(User ,related_name= "follow_user",blank=True)
+    profilePic = models.ImageField(null=True)
 
 
     class Meta:
