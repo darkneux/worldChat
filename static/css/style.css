@@ -42,7 +42,7 @@ body{
 .container img.right {
   float: right;
   margin-left: 10px;
-  margin-right:0px;
+  margin-right:5px;
 }
 
 /* Style time text */
