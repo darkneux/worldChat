@@ -13,14 +13,14 @@
 <!--style="background-color:#E5FBF4"-->
   <div class="container" align="left" >
     <p> {{message.message_from}}</p>
-  <img src="/w3images/bandmember.jpg" alt="Avatar">
+  <img src="{% if user_profile.profilePic.url != None %} {{user_profile.profilePic.url}} {% else %} /w3images/bandmember.jpg {% endif %}" alt="Avatar">
   <p>{{message.message_text}}</p>
   <span class="time-right">{{message.message_createTime}}</span>
   </div>
   {% else %}
 <!--style="background-color:#E5ECFB"-->
   <div class="container darker" align="right" >
-  <img src= "{{user_profile.profilePic.url}}"  alt="Avatar" class="right" style="width:25px;">
+  <img src= "{% if user_profile.profilePic.url != None %} {{user_profile.profilePic.url}} {% else %} /w3images/bandmember.jpg {% endif %}"  alt="Avatar" class="right" style="width:35px;">
   <p>{{message.message_text}}</p>
   <span class="time-left">{{message.message_createTime}}</span>
   </div>

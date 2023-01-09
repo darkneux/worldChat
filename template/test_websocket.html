@@ -13,10 +13,9 @@
 
 <script>
     const groupName = JSON.parse(document.getElementById('group-name').textContent)
-    //var ws = new WebSocket('ws://127.0.0.1:8000/ws/sc/')
+    // var ws = new WebSocket('ws://127.0.0.1:8000/ws/sc/')
     var ws = new WebSocket(
-    'ws://'+ window.location.host + '/ws/sc/'+groupName+'/'
-    )
+    'ws://'+ window.location.host + '/ws/sc/'+groupName+'/')
 
     ws.onopen = function(){
        console.log('WebSocket Connetion open...')
