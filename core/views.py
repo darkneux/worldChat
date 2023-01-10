@@ -15,7 +15,7 @@ def startpage(request):
 def chat_global(request):
 
     if not request.user.is_authenticated:
-        return redirect('/signup')
+        return redirect('/signup/')
 
     print(request.user)
     present_chatroom_chats = Message.objects.filter(message_chatroom__isnull=True,message_group__isnull=True,message_to__isnull=True).order_by('-message_createTime')[:10][::-1]
@@ -44,7 +44,7 @@ def chat_global(request):
 
 def chat_ChatRoom(request,chatroom_name):
     if not request.user.is_authenticated:
-        return redirect('/signup')
+        return redirect('/signup/')
 
     chatroom = ChatRoom.objects.get(chatroom_name=chatroom_name)
     chatroom_id = chatroom.chatroom_id
