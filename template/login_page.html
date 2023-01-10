@@ -1,22 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Title</title>-->
-<!--</head>-->
-<!--<body>-->
-
-<!--<form method="POST" action="">-->
-<!--    {% csrf_token %}-->
-<!--    username : <input type="text" name="username"><br>-->
-<!--    password : <input type="password" name="passwd"><br>-->
-<!--    <input type="submit" ><br>-->
-<!--</form>-->
-
-<!--</body>-->
-<!--</html>-->
-
-
 <!DOCTYPE html>
 <html>
 
@@ -33,13 +14,13 @@
 			margin: 0;
 			padding: 0;
 			height: 100%;
-			background: #7abecc !important;
+			background: #0d2024 !important;
 		}
 		.user_card {
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #74cfbf;
+			background: #05221d;
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -48,7 +29,7 @@
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+			border-radius: 7px;
 
 		}
 
@@ -64,7 +45,7 @@
 		.login_btn {
 			width: 100%;
 			background: #33ccff !important;
-			color: white !important;
+			color: #4d3737 !important;
 		}
 		.login_btn:focus {
 			box-shadow: none !important;
@@ -91,6 +72,14 @@
 			padding: 10px;
 			margin-top: 10px;
 		}
+		.mt-4{
+            color: #719fcc;
+        }
+        .loginError{
+        margin-left: 40px;
+        color: #e37070;
+        font-weight: bold;
+        }
 	</style>
 
 </head>
@@ -103,6 +92,12 @@
 
 					<h3 id="form-title">LOGIN</h3>
 				</div>
+				<div class="loginError">
+					Currently Login is not Working  :( <br>
+					I am working on it
+
+				</div>
+
 				<div class="d-flex justify-content-center form_container">
 					<form method="POST" action="">
 						{% csrf_token %}

@@ -149,14 +149,19 @@ def chat_privateChat(request,private_username):
     return render(request,'privateChat_page.html',data)
 
 def loginPage(request):
+    #   not working >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     if request.method == 'POST':
         username = request.POST['username']
         passwd = request.POST['passwd']
+        print(username,passwd)
         user = authenticate(request,username=username,password=passwd)
+        print(type(user))
+        print(user)
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect("/global/")    # / in front of 'global' is important else it will be
-                                                       # webpage/login/global rather then webpage/global
+            return redirect("/global/")                   # / in front of 'global' is important else it will be
+        if User.objects.filter(username=username).exists():
+            return redirect('/login/')                   # webpage/login/global rather then webpage/global
 
     return render(request,'login_page.html')
 
