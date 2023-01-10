@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+!4ozci_w4ypxf%7(qg_eoa=8zi#$r2-97t#bsr#dj$ewj1d)d
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS =['https://worldchat.darkneux.repl.co','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS =['https://webchat.darkneux.repl.co','https://*.127.0.0.1']
 
 # Application definition
 

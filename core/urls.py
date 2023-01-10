@@ -10,7 +10,7 @@ urlpatterns = [
     path('chat/<private_username>',views.chat_privateChat),
     path('login/',views.loginPage),
     path('demo/<group_name>/',views.demo),
-    path('signup/',views.signupPage)
+    path('signup/',views.signupPage),
 
 
 ]
