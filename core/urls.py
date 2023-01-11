@@ -11,6 +11,7 @@ urlpatterns = [
     path('login/',views.loginPage),
     path('demo/<group_name>/',views.demo),
     path('signup/',views.signupPage),
+    path('test/',views.test),
 
 
 ]

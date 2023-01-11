@@ -38,7 +38,7 @@ def chat_global(request):
         newchatroom.save()
         return redirect('/global/')
 
-    return render(request, 'globalChat_page.html',data)
+    return render(request, 'index.html',data)
 
 
 
@@ -192,3 +192,7 @@ def signupPage(request):
 
 def demo(request,group_name):
     return render(request,'test_websocket.html',{'groupname':group_name})
+
+
+def test(request):
+    return render(request,'index.html')

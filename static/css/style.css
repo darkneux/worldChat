@@ -1,8 +1,8 @@
 /* Chat containers */
-body{
+.body{
   height: 100px;
   width: 800px;
-  background-color: #454F4C;
+  background-color: #081510 ;
   margin-left: 300px;
   margin-bottom: 50px;
   position: relative;
